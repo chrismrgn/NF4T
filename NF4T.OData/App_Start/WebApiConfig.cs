@@ -3,6 +3,7 @@ using System.Web.OData.Batch;
 using System.Web.OData.Builder;
 using System.Web.OData.Extensions;
 using Microsoft.OData.Edm;
+using NF4T.Models;
 using NF4T.OData.Models;
 
 namespace NF4T.OData
@@ -19,8 +20,8 @@ namespace NF4T.OData
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             //builder.Namespace = "NF4T";
             //builder.ContainerName = "DefaultContainer";
-            builder.EntitySet<Event>("Events");
-            builder.EntitySet<Event>("events");
+            builder.EntitySet<Record>("Records");
+            builder.EntitySet<Record>("records");
             builder.EntitySet<CMEnvironment>("CMEnvironments");
             var edmModel = builder.GetEdmModel();
             return edmModel;

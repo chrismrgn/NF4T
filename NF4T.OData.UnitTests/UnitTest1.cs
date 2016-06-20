@@ -1,11 +1,10 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NF4T.Models;
 using NF4T.OData.Controllers;
-using NF4T.OData.Models;
 
 namespace NF4T.OData.UnitTests
 {
@@ -23,7 +22,7 @@ namespace NF4T.OData.UnitTests
             controller.Configuration = new HttpConfiguration();
 
             // Act
-            var actionResult = controller.Get() as OkNegotiatedContentResult<IQueryable<Event>>;
+            var actionResult = controller.Get() as OkNegotiatedContentResult<IQueryable<Record>>;
 
             Assert.IsNotNull(actionResult);
 

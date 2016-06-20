@@ -83,6 +83,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NF4T.Models\NF4T.Models.csproj">
+      <Project>{A01BC54A-45D8-4A1B-93BE-B1D71FDCEF0A}</Project>
+      <Name>NF4T.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NF4T.OData\NF4T.OData.csproj">
       <Project>{1715929b-b697-48a2-b37d-6863fcafbad8}</Project>
       <Name>NF4T.OData</Name>

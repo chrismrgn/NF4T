@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NF4T.OData", "NF4T.OData\NF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NF4T.OData.UnitTests", "NF4T.OData.UnitTests\NF4T.OData.UnitTests.csproj", "{5D38AF59-B75C-43C7-8C52-7B4CF4D5341A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NF4T.Tridion", "NF4T.Tridion\NF4T.Tridion.csproj", "{AA6E1558-6EEB-4C2C-BE1D-B034CA2013FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NF4T.Models", "NF4T.Models\NF4T.Models.csproj", "{A01BC54A-45D8-4A1B-93BE-B1D71FDCEF0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{5D38AF59-B75C-43C7-8C52-7B4CF4D5341A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D38AF59-B75C-43C7-8C52-7B4CF4D5341A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D38AF59-B75C-43C7-8C52-7B4CF4D5341A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA6E1558-6EEB-4C2C-BE1D-B034CA2013FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA6E1558-6EEB-4C2C-BE1D-B034CA2013FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA6E1558-6EEB-4C2C-BE1D-B034CA2013FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA6E1558-6EEB-4C2C-BE1D-B034CA2013FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01BC54A-45D8-4A1B-93BE-B1D71FDCEF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01BC54A-45D8-4A1B-93BE-B1D71FDCEF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01BC54A-45D8-4A1B-93BE-B1D71FDCEF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01BC54A-45D8-4A1B-93BE-B1D71FDCEF0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
