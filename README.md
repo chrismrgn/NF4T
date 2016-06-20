@@ -1,4 +1,4 @@
-# Notification Framework For SDL Web (SDL Tridion) - NF4T
+# Notification Framework For SDL Web (Tridion) - NF4T
 
 ## Content Manager
 
