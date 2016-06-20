@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Configuration;
-using System.IO;
 using System.Net.Http;
 using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
 using NF4T.Models;
 using NF4T.OData.Models;
 using Tridion.ContentManager;
@@ -42,7 +40,7 @@ namespace NF4T.Tridion
             {
               TcmId = subject.Id,
               Title = subject.Title,
-              Type = typeof(Subject),
+              Type = subject.GetType(),
               CreationDate = subject.CreationDate,
               LastModifiedDate = subject.RevisionDate
             };
@@ -57,14 +55,16 @@ namespace NF4T.Tridion
             //Set Event
             record.Event = new Event
             {
-                //TcmId = subject.Id,
-                //Title = subject.Title,
-                //Type = typeof(Subject),
-                //CreationDate = subject.CreationDate,
-                //LastModifiedDate = subject.RevisionDate
+                Type = eventArgs.GetType(),
+                TimeStamp = DateTime.Now
             };
 
-
+            //Extract ItemTypeSpecifics
+            if (eventArgs is SaveEventArgs)
+            {
+                var saveEventArgs = eventArgs as SaveEventArgs;
+                record.Event.IsNewItem = saveEventArgs.IsNewItem;
+            }
 
             //Extract EventType Specifics
             switch (eventArgs.GetType().Name)
@@ -81,7 +81,7 @@ namespace NF4T.Tridion
 
         private void Post(Event @event)
         {
-            string url = ConfigurationManager.AppSettings.Get("NF4TPostUrl");
+            string url = ConfigurationManager.AppSettings.Get("NF4T_PostUrl");
 
             HttpClient client = new HttpClient();
             HttpContent content = new ObjectContent<Event>(@event, new JsonMediaTypeFormatter());
